@@ -7,11 +7,5 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   titlex = 'started';
-  myemail:string = "jv@gmail.com";
-  myChoice:boolean  = false;
 
-  OnSubmit = () =>{
-    alert("login done");
-    console.log(`email: ${this.myemail}, choice: ${this.myChoice}`);
-  }
 }
