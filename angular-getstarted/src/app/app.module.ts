@@ -8,13 +8,19 @@ import { FormComponent } from './form/form.component';
 import { MaterialModule } from './material.module';
 import { ReactiveFormComponent } from './reactive-form/reactive-form.component';
 import { TFormComponent } from './t-form/t-form.component';
+import { TimerComponent } from './timer/timer.component';
+import { VoteTakerComponent } from './vote-taker/vote-taker.component';
+import { VoterComponent } from './voter/voter.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     TFormComponent,
     ReactiveFormComponent,
-    FormComponent
+    FormComponent,
+    TimerComponent,
+    VoterComponent,
+    VoteTakerComponent
   ],
   imports: [
     FormsModule,

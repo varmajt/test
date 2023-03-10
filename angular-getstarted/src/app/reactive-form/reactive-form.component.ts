@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { AbstractControlOptions, FormBuilder, FormControl, FormGroup, Validators } from '@angular/forms';
+import { FormBuilder, FormControl, FormGroup, Validators } from '@angular/forms';
 
 @Component({
   selector: 'app-reactive-form',
@@ -12,9 +12,9 @@ export class ReactiveFormComponent {
 
   }
 
-  // skillForm = this.fb.group({
-  //   firstName: ['', { validators: Validators.required } as AbstractControlOptions],
-  //   lastName: [''],
+  // skillForm2 = this.fb.group({
+  //   firstName: ['', Validators.required],
+  //   lastName: ['', [Validators.required, Validators.minLength(3)]],
   //   address: this.fb.group({
   //     street: [''],
   //   })
@@ -25,8 +25,8 @@ export class ReactiveFormComponent {
   }
 
   skillForm = new FormGroup({
-    firstName: new FormControl('', Validators.required),
-    lastName: new FormControl('', Validators.minLength(3)),
+    first: new FormControl('', Validators.required),
+    last: new FormControl('', [Validators.required, Validators.minLength(3)]),
     address: new FormGroup({
       street: new FormControl(''),
     })
@@ -34,7 +34,7 @@ export class ReactiveFormComponent {
 
   updateProfile() {
     this.skillForm.patchValue({
-      firstName: 'Nancy',
+      first: 'Nancy',
       address: {
         street: '123 Drew Street'
       }

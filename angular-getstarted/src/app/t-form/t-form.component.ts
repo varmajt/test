@@ -7,7 +7,7 @@ import { Member } from '../member';
   styleUrls: ['./t-form.component.css']
 })
 export class TFormComponent {
-  skills = ['.net', 'angular', 'js', '']
+  skills = ['.net', 'angular', 'js', '', 'SQL']
   model = new Member(18, 'John Doe', this.skills[0]);
 
   newMember() {
@@ -16,5 +16,9 @@ export class TFormComponent {
   }
   onSubmit() {
     console.log(`form is submitted.`);
+  }
+
+  changeName() {
+    this.model.name = "name Changed";
   }
 }
