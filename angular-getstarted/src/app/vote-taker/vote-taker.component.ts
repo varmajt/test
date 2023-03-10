@@ -8,7 +8,7 @@ import { Component } from '@angular/core';
 export class VoteTakerComponent {
   agreed = 0;
   disagreed = 0;
-  voters = ['Sai Krishna', 'Sai Priya', 'Sudheer'];
+  voters = ['Sai Krishna', 'Sai Priya', 'Sudheer', 'Varma'];
 
   onVoted(agreed: boolean) {
     if (agreed) {
