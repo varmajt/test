@@ -14,12 +14,12 @@ import { Component, EventEmitter, Input, Output } from '@angular/core';
   styleUrls: ['./voter.component.css']
 })
 export class VoterComponent {
-  @Input() name = '';
-  @Output() voted = new EventEmitter<boolean>();
+  @Input('nameofuser') name = '';
+  @Output() voterResponse = new EventEmitter<boolean>();
   didVote = false;
 
   vote(agreed: boolean) {
-    this.voted.emit(agreed);
+    this.voterResponse.emit(agreed);
     this.didVote = true;
   }
 }
