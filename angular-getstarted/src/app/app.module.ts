@@ -12,6 +12,7 @@ import { TFormComponent } from './t-form/t-form.component';
 import { TimerComponent } from './timer/timer.component';
 import { VoteTakerComponent } from './vote-taker/vote-taker.component';
 import { VoterComponent } from './voter/voter.component';
+import { WeatherComponent } from './weather/weather.component';
 
 @NgModule({
   declarations: [
@@ -21,7 +22,8 @@ import { VoterComponent } from './voter/voter.component';
     FormComponent,
     TimerComponent,
     VoterComponent,
-    VoteTakerComponent
+    VoteTakerComponent,
+    WeatherComponent
   ],
   imports: [
     FormsModule,

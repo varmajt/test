@@ -1,11 +1,14 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
-import { ReactiveFormComponent } from './reactive-form/reactive-form.component';
-import { TFormComponent } from './t-form/t-form.component';
+import { FormComponent } from './form/form.component';
+import { TimerComponent } from './timer/timer.component';
+import { WeatherComponent } from './weather/weather.component';
 
 const routes: Routes = [
-  {path:"template-form", component:TFormComponent},
-  {path:"reactive-form", component:ReactiveFormComponent}
+  { path: "playground", component: FormComponent },
+  { path: "timer", component: TimerComponent },
+  { path: "weather", component: WeatherComponent },
+  { path: "**", component: FormComponent }
 ];
 
 @NgModule({

@@ -4,7 +4,8 @@
 
 export const environment = {
   production: false,
-  URI: "http://localhost:3000"
+  URI: "http://localhost:3000",
+  dotnetURI: "http://localhost:5036"
 };
 
 /*

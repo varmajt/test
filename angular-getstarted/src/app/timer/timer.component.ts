@@ -25,7 +25,7 @@ export class TimerComponent implements OnInit {
   settime() {
 
     this.timerService.GetServerTime().subscribe(data => {
-      console.log(`data: ${data}`);
+      // console.log(`data: ${data}`);
       this.currentTime = new Date(data.toString());
     });
 
