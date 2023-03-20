@@ -22,7 +22,7 @@ app.get('/',(req, res) => {
 });
 
 app.get('/date',(req, res) => {
-  console.log(new Date().toString());
+  //console.log(new Date().toString());
   res.json(new Date().toString());
 });
 
