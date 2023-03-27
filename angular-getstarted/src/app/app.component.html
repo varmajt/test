@@ -1,15 +1,21 @@
 <title>{{title}}</title>
-
 <mat-toolbar color="primary">
     <mat-toolbar-row>
         <span>R n D</span>
-        <span class="menu-spacer"></span>
         <div>
             <a mat-button [routerLink]="'/playground'">playground</a>
-            <a mat-button [routerLink]="'/timer'"> Timer</a>
-            <a mat-button [routerLink]="'/weather'"> Weather</a>
+            <a mat-button [routerLink]="'/home'" routerLinkActive="active"> Home</a>
+        </div>
+        <span class="menu-spacer"></span>
+        <div *ngIf="user">
+            <app-timer></app-timer>
+            <button mat-stroked-button color="accent" (click)="logout()"><span
+                    class="material-icons">logout</span>Logout</button>
         </div>
     </mat-toolbar-row>
 </mat-toolbar>
 
+
 <router-outlet></router-outlet>
+<hr />
+{{user|json}}

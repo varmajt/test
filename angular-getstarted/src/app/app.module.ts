@@ -13,6 +13,9 @@ import { TimerComponent } from './timer/timer.component';
 import { VoteTakerComponent } from './vote-taker/vote-taker.component';
 import { VoterComponent } from './voter/voter.component';
 import { WeatherComponent } from './weather/weather.component';
+import { LoginComponent } from './login/login.component';
+import { HomeComponent } from './home/home.component';
+import { MinuteSecondsPipe } from './_helpers';
 
 @NgModule({
   declarations: [
@@ -23,7 +26,10 @@ import { WeatherComponent } from './weather/weather.component';
     TimerComponent,
     VoterComponent,
     VoteTakerComponent,
-    WeatherComponent
+    WeatherComponent,
+    LoginComponent,
+    HomeComponent,
+    MinuteSecondsPipe
   ],
   imports: [
     FormsModule,

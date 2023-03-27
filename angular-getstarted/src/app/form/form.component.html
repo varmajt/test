@@ -1,37 +1,6 @@
-<app-timer></app-timer>
-<app-weather></app-weather>
 <app-vote-taker></app-vote-taker>
 
 <mat-tab-group animationDuration="0ms">
     <mat-tab label="Template-driven"><app-t-form></app-t-form></mat-tab>
     <mat-tab label="Reactive"><app-reactive-form></app-reactive-form></mat-tab>
 </mat-tab-group>
-
-<mat-card>
-    <mat-card-header>
-        <mat-card-title>Sign in</mat-card-title>
-    </mat-card-header>
-    <mat-card-content>
-        <form>
-            <p>
-                <mat-form-field appearance="outline">
-                    <mat-label>Email</mat-label>
-                    <input matInput type="email" name="email" id="email" />
-                </mat-form-field>
-            </p>
-            <p>
-                <mat-form-field appearance="outline">
-                    <mat-label>Password</mat-label>
-                    <input matInput type="password" name="password" id="password" autocomplete="on" />
-                </mat-form-field>
-            </p>
-            <p>
-                <mat-checkbox>Remember me</mat-checkbox>
-            </p>
-        </form>
-    </mat-card-content>
-    <mat-card-footer>
-        <button mat-raised-button color="primary" (click)="OnSubmit()">Login</button>
-    </mat-card-footer>
-    <br />
-</mat-card>

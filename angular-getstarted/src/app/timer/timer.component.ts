@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { interval, Subscription } from 'rxjs';
-import { TimerService } from '../timer.service';
+import { AuthenticationService } from '../_services/authentication.service';
+import { TimerService } from '../_services/timer.service';
 
 @Component({
   selector: 'app-timer',
@@ -9,17 +10,17 @@ import { TimerService } from '../timer.service';
 })
 export class TimerComponent implements OnInit {
 
-  currentTime: Date = new Date("1/1/2000");
+  currentTime!: Date | null;
   subscription: Subscription = new Subscription();
-
-  constructor(private timerService: TimerService) {
+  timeLeft = 3600;
+  constructor(private timerService: TimerService,
+    private authServce: AuthenticationService) {
 
   }
 
   ngOnInit(): void {
     const mock = interval(1000);
     this.subscription = mock.subscribe(() => { this.settime() });
-
   }
 
   settime() {
@@ -27,6 +28,10 @@ export class TimerComponent implements OnInit {
     this.timerService.GetServerTime().subscribe(data => {
       // console.log(`data: ${data}`);
       this.currentTime = new Date(data.toString());
+      this.timeLeft--;
+      if (this.timeLeft == 0) {
+        this.logout();
+      }
     });
 
   }
@@ -35,4 +40,8 @@ export class TimerComponent implements OnInit {
     this.subscription && this.subscription.unsubscribe();
   }
 
+  logout() {
+    this.authServce.logout();
+  }
 }
+

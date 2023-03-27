@@ -21,6 +21,10 @@ app.get('/',(req, res) => {
   res.sendFile(path.join(__dirname,'..','angular-getstarted/dist/index.html'));
 });
 
+app.post('/users/authenticate', (req, res) => {
+    res.send(JSON.stringify({username: "varma"}))
+});
+
 app.get('/date',(req, res) => {
   //console.log(new Date().toString());
   res.json(new Date().toString());
