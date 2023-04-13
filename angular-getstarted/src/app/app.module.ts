@@ -5,18 +5,17 @@ import { BrowserModule } from '@angular/platform-browser';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations'
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
-import { FormComponent } from './form/form.component';
+import { FormComponent } from './playground/form/form.component';
 import { MaterialModule } from './material.module';
-import { ReactiveFormComponent } from './reactive-form/reactive-form.component';
-import { TFormComponent } from './t-form/t-form.component';
+import { ReactiveFormComponent } from './playground/reactive-form/reactive-form.component';
+import { TFormComponent } from './playground/t-form/t-form.component';
 import { TimerComponent } from './timer/timer.component';
-import { VoteTakerComponent } from './vote-taker/vote-taker.component';
-import { VoterComponent } from './voter/voter.component';
-import { WeatherComponent } from './weather/weather.component';
+import { VoteTakerComponent } from './playground/vote-taker/vote-taker.component';
+import { VoterComponent } from './playground/voter/voter.component';
 import { LoginComponent } from './login/login.component';
 import { HomeComponent } from './home/home.component';
 import { MinuteSecondsPipe } from './_helpers';
-import { TimezoneComponent } from './timezone/timezone.component';
+import { TimezoneComponent } from './playground/timezone/timezone.component';
 import { Timer_Value } from './app.config';
 import { ViewArticleComponent } from './view-article/view-article.component';
 import { EditArticleComponent } from './edit-article/edit-article.component';
@@ -30,7 +29,6 @@ import { EditArticleComponent } from './edit-article/edit-article.component';
     TimerComponent,
     VoterComponent,
     VoteTakerComponent,
-    WeatherComponent,
     LoginComponent,
     HomeComponent,
     MinuteSecondsPipe,
