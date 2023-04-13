@@ -9,7 +9,7 @@ import { Component, EventEmitter, Input, Output } from '@angular/core';
         </button>
 
         <button class="margin-5" mat-mini-fab color="warn" (click)="vote(false)" [disabled]="didVote">
-          <mat-icon  class="icon-display">thumb_down</mat-icon>
+          <mat-icon class="icon-display">thumb_down</mat-icon>
         </button>`,
   styleUrls: ['./voter.component.css']
 })

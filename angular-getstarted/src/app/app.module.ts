@@ -16,6 +16,10 @@ import { WeatherComponent } from './weather/weather.component';
 import { LoginComponent } from './login/login.component';
 import { HomeComponent } from './home/home.component';
 import { MinuteSecondsPipe } from './_helpers';
+import { TimezoneComponent } from './timezone/timezone.component';
+import { Timer_Value } from './app.config';
+import { ViewArticleComponent } from './view-article/view-article.component';
+import { EditArticleComponent } from './edit-article/edit-article.component';
 
 @NgModule({
   declarations: [
@@ -29,7 +33,10 @@ import { MinuteSecondsPipe } from './_helpers';
     WeatherComponent,
     LoginComponent,
     HomeComponent,
-    MinuteSecondsPipe
+    MinuteSecondsPipe,
+    TimezoneComponent,
+    ViewArticleComponent,
+    EditArticleComponent
   ],
   imports: [
     FormsModule,
@@ -40,7 +47,7 @@ import { MinuteSecondsPipe } from './_helpers';
     ReactiveFormsModule,
     HttpClientModule
   ],
-  providers: [],
+  providers: [{ provide: Timer_Value, useValue: 3600 }],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

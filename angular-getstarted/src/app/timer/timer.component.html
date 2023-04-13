@@ -1,1 +1,5 @@
 <span class="timer">Timeout in {{timeLeft | minuteSeconds}}</span>
+<button mat-stroked-button (click)="ResetSessoion()">
+    <mat-icon class="icon-display">restore</mat-icon>
+</button>
+<button mat-stroked-button *ngIf="timeLeft < 900" (click)="ExtendSession()">+30 m</button>

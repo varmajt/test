@@ -1,1 +1,14 @@
-<app-weather></app-weather>
+<h3>List of Articles - {{AllArticles.length}}</h3>
+<button mat-raised-button>Add new</button>
+
+<div mat-card class="card">
+    <div *ngFor="let article of AllArticles">
+        <a [routerLink]="['/view', article.id]" routerLinkActive mat-card-title>{{article.header}}
+            <mat-icon>remove_red_eye</mat-icon> {{article.views}}
+        </a>
+        <div mat-card-subtitle>by <a href="mailto:{{article.authorEmail}}" target="_blank">{{article.authorEmail}}</a>
+        </div>
+    </div>
+</div>
+<hr />
+{{this.AllArticles | json}}
