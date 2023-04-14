@@ -11,7 +11,7 @@ import { Article } from '../_models/Article';
 })
 export class ViewArticleComponent implements OnInit {
 
-  Article$!: Observable<Article[]>;
+  Article$?: Observable<Article | null>;
 
   constructor(private route: ActivatedRoute, private router: Router, private articleService: ArticleService) {
 
@@ -28,7 +28,7 @@ export class ViewArticleComponent implements OnInit {
     this.Article$ = this.route.paramMap.pipe(
       switchMap((params: ParamMap) =>
         this.articleService.GetArticleById(parseFloat(params.get('id')!)))
-    );
+    )!;
   }
 
   goToList() {

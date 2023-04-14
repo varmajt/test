@@ -5,6 +5,7 @@
         <div>
             <a mat-button [routerLink]="'/home'" routerLinkActive="active"> Home</a>
             <a mat-button [routerLink]="'/playground'">playground</a>
+            <a *ngIf="user" mat-button [routerLink]="'/edit'">New Article</a>
         </div>
         <span class="menu-spacer"></span>
         <div *ngIf="user">

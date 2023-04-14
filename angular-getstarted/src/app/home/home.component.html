@@ -1,14 +1,12 @@
 <h3>List of Articles - {{AllArticles.length}}</h3>
-<button mat-raised-button>Add new</button>
-
-<div mat-card class="card">
-    <div *ngFor="let article of AllArticles">
-        <a [routerLink]="['/view', article.id]" routerLinkActive mat-card-title>{{article.header}}
+<mat-card class="card" *ngFor="let article of AllArticles">
+    <mat-card-header>
+        <a [routerLink]="['/view', article.articleId]" routerLinkActive mat-card-title>{{article.header}}
             <mat-icon>remove_red_eye</mat-icon> {{article.views}}
         </a>
-        <div mat-card-subtitle>by <a href="mailto:{{article.authorEmail}}" target="_blank">{{article.authorEmail}}</a>
-        </div>
-    </div>
-</div>
+        <mat-card-subtitle>by <a href="mailto:{{article.authorEmail}}" target="_blank">{{article.authorEmail}}</a>
+        </mat-card-subtitle>
+    </mat-card-header>
+</mat-card>
 <hr />
 {{this.AllArticles | json}}

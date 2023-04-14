@@ -1,1 +1,12 @@
-<div>{{Article$ | async | json}}</div>
+<mat-card>
+    <mat-card-header>
+        <mat-card-title>{{(Article$ | async)?.header}}</mat-card-title>
+        <mat-card-subtitle>{{(Article$ | async)?.authorEmail}} | {{(Article$ | async)?.publishedAt |
+            date}}</mat-card-subtitle>
+    </mat-card-header>
+    <mat-card-content>
+        {{(Article$ | async)?.content}}
+    </mat-card-content>
+
+</mat-card>
+<!-- <div>{{Article$ | async | json}}</div> -->
